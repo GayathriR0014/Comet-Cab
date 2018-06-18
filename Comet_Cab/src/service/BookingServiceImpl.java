@@ -59,8 +59,9 @@ public class BookingServiceImpl implements BookingService{
 			licenseInserted=MakebookingDao.SetTripInfo(driverDetails.getDriverId(),cabDetails.getLicensePlateNo(),bookingInfo.getBookingId());
 			Confirmation="Your booking is now confirmed. Your booking ID is "+bookingInfo.getBookingId();
 			Confirmation=Confirmation+"<br>Your driver is  "+driverDetails.getLastName()+","+driverDetails.getFirstName();
-			
-			
+			Confirmation=Confirmation+"<br>License Plate Number : "+cabDetails.getLicensePlateNo();
+			Confirmation=Confirmation+"<br>Driver contact number : "+driverDetails.getPhoneNo();
+			Confirmation=Confirmation+"<br>The driver will arrive in 5 minutes";
 		}
 		}
 		System.out.println("VALUE "+Confirmation);
